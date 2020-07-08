@@ -1,12 +1,12 @@
 Set-ExecutionPolicy -Scope Process Bypass
 
-## Setting Time Zone to East Coast
+## Setting Time Zone to CT
 Write-Host "Setting Time Zone"
-Set-TimeZone -Name "Eastern Standard Time"
+Set-TimeZone -Name "Central Standard Time"
 
-Write-Host "Setting Computer Name:"
-$input = Read-Host “: ”
-Rename-Computer -newname “$input”
+# Write-Host "Setting Computer Name:"
+# $input = Read-Host “: ”
+# Rename-Computer -newname “$input”
 
 ## Installing the NuGet PSGallery
 Write-Host "Installing the NuGet PSGallery"
@@ -35,7 +35,7 @@ choco install dotnet4.6.2  -y
 choco install jre8 -y
 choco install 7zip.install -y
 choco install -y vlc
-choco install googlechrome -y
+# choco install googlechrome -y
 
 ## Removing default Win10 Bloatware
 Write-Host "Removing Bloatware"
